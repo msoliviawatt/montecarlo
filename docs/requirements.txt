@@ -1,5 +1,7 @@
 numpy
 matplotlib
 sphinx
-sphinx_rtd_theme
+pydata-sphinx-theme
 myst_parser
+sphinx_design
+sphinx_copybutton
