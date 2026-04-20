@@ -15,7 +15,7 @@
 # Incase the project was not installed
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath('../src'))
 
 import montecarlo
 
@@ -57,6 +57,15 @@ extensions = [
 
 
 autosummary_generate = True
+autodoc_default_options = {
+'members': True,
+'imported-members': True,
+'undoc-members': True,
+'show-inheritance': True,
+}
+autodoc_mock_imports = ['numpy']
+
+
 napoleon_google_docstring = False
 napoleon_use_param = False
 napoleon_use_ivar = True

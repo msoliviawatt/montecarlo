@@ -6,6 +6,8 @@ montecarlo documentation
    :caption: Contents:
 
    README
+   installation
+   useage
    getting_started
    user_guide
    developer_guide
