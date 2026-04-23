@@ -94,9 +94,9 @@ class IsingHamiltonian:
     def __init__(self, Graph):
         self.Graph = Graph
         self.N = len(Graph)
-        self.mus = np.zeros(self.N)
-        self.bs = BitString(len(self.mus))
-        self.bs.set_config(self.mus)
+        self.mu = np.zeros(self.N)
+        self.bs = BitString(len(self.mu))
+        self.bs.set_config(self.mu)
         self.J = Graph
 
     def energy(self, config: BitString):
@@ -124,12 +124,12 @@ class IsingHamiltonian:
             if (spin_i == 0):
                 spin_i = -1
 
-            E += self.mus[i] * spin_i
+            E += self.mu[i] * spin_i
 
         return E
 
-    def set_mu(self, mus: np.array):
-        self.mus = mus
+    def set_mu(self, mu: np.array):
+        self.mu = mu
 
     def compute_average_values(self, T: int):
         E  = 0.0
